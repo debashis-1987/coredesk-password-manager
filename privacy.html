@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Coredesk Password Manager</title>
+<style>
+  :root {
+    --bg: #14161f; --card: #20242f; --border: #333846;
+    --text: #e3e6f0; --muted: #8b90a5; --accent: #6d5ef0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text);
+         font-family: 'Segoe UI', system-ui, Arial, sans-serif; line-height: 1.65; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+  a { color: var(--accent); text-decoration: none; }
+  h1 { font-size: 30px; margin: 12px 0 4px; }
+  .sub { color: var(--muted); margin-bottom: 28px; }
+  h2 { font-size: 20px; margin: 34px 0 8px; }
+  p, li { color: var(--text); font-size: 15px; }
+  ul { padding-left: 22px; margin: 8px 0; }
+  .card { background: var(--card); border: 1px solid var(--border);
+          border-radius: 12px; padding: 18px 22px; margin: 18px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 10px 0 18px; }
+  td { border: 1px solid var(--border); padding: 8px 12px; vertical-align: top; font-size: 14px; }
+  td:first-child { color: var(--muted); width: 45%; }
+  .back { display: inline-block; margin-bottom: 22px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./">← Coredesk Password Manager</a>
+<h1>Privacy Policy</h1>
+<p class="sub">Coredesk Password Manager · Last updated: November 20, 2026</p>
+
+<div class="card">
+<b>Summary:</b> the app stores your data <b>on your device only</b>. It
+contains no analytics, no advertising and no trackers, and it never
+communicates with any server operated by the developer. Your passwords
+never leave your computer except in files you explicitly create
+yourself (encrypted backups and mobile exports you choose to save).
+</div>
+
+<h2>What the app stores, and where</h2>
+<table>
+  <tr><td>Your saved credentials (passwords, cards, notes, 2FA secrets)</td>
+      <td>An encrypted file (<code>vault.bin</code>) on your device</td></tr>
+  <tr><td>Preferences (theme, window size)</td>
+      <td>A small config file on your device</td></tr>
+  <tr><td>Backups and mobile exports</td>
+      <td>Files you choose to create, wherever you choose to save them</td></tr>
+</table>
+<p>The vault is encrypted with AES-256-GCM; the encryption key is derived
+from your master passphrase via PBKDF2 and is <b>never written to
+disk</b>.</p>
+
+<h2>What the app does not do</h2>
+<ul>
+  <li>It does not send your data, usage statistics, crash reports, or any
+      other information to any server.</li>
+  <li>It does not include any third-party analytics, advertising, or
+      tracking SDKs.</li>
+  <li>It does not require an account and offers no cloud sync.</li>
+  <li>It accesses the network only when <b>you</b> click a link in an
+      entry (your own browser opens that website), and when the
+      Microsoft Store delivers app updates (handled by Windows, not the
+      app).</li>
+</ul>
+
+<h2>Optional features and their privacy impact</h2>
+<ul>
+  <li><b>FIDO hardware-key unlock</b> — communicates only with your own
+      USB security key through the operating system's FIDO APIs. No data
+      leaves the device.</li>
+  <li><b>Key file / quick PIN / auto-lock</b> — purely local mechanisms.</li>
+  <li><b>Encrypted backup / KeePass (.kdbx) mobile export</b> — files
+      created only when you request them, saved where you choose. What
+      you do with those files (e.g. uploading them to your own cloud
+      storage) is your decision and outside this app.</li>
+  <li><b>Imports (browser CSV, KeePass, Bitwarden)</b> — read from files
+      you select; nothing is transmitted.</li>
+</ul>
+
+<h2>Permissions used</h2>
+<ul>
+  <li><b>runFullTrust</b> (Microsoft Store packaging) — the standard
+      permission for desktop applications; required to run as a normal
+      Windows program.</li>
+  <li>The app requests no camera, microphone, location, contacts, or
+      other sensitive device permissions.</li>
+</ul>
+
+<h2>Children</h2>
+<p>The app is not directed at children and collects no data from anyone.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app: contact the developer through
+the app's Microsoft Store listing (Developer information section).</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the updated version will ship with the next
+app update and be published on this page.</p>
+</div>
+</body>
+</html>

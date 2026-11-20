@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coredesk Password Manager</title>
+<meta name="description" content="Offline password manager with FIDO hardware-key unlock, built-in 2FA authenticator, health audit and encrypted mobile export. Your data never leaves your device.">
+<style>
+  :root {
+    --bg: #14161f; --bg2: #1b1e2b; --card: #20242f; --card2: #252a37;
+    --border: #333846; --text: #e3e6f0; --muted: #8b90a5;
+    --accent: #6d5ef0; --accent2: #8578f5; --danger: #e0556a; --ok: #4cc38a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+  header {
+    background: linear-gradient(180deg, var(--bg2), var(--bg));
+    border-bottom: 1px solid var(--border);
+  }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+  .logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--text); }
+  .logo span { color: var(--accent); }
+  nav .links a { color: var(--muted); text-decoration: none; margin-left: 22px; font-size: 14px; }
+  nav .links a:hover { color: var(--text); }
+  .hero { text-align: center; padding: 72px 0 56px; }
+  .hero .shield { font-size: 56px; }
+  h1 { font-size: 42px; margin: 12px 0 10px; letter-spacing: -0.5px; }
+  .tagline { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0 auto 28px; }
+  .badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 34px; }
+  .badge {
+    background: var(--card); border: 1px solid var(--border); color: var(--muted);
+    padding: 5px 14px; border-radius: 999px; font-size: 13px;
+  }
+  .cta { display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+         padding: 13px 30px; border-radius: 10px; font-weight: 600; font-size: 16px; }
+  .cta:hover { background: var(--accent2); }
+  .cta-note { color: var(--muted); font-size: 13px; margin-top: 10px; }
+  .shot {
+    display: block; width: 100%; max-width: 880px; margin: 48px auto 0;
+    border: 1px solid var(--border); border-radius: 12px;
+    box-shadow: 0 24px 60px rgba(0,0,0,.45);
+  }
+  section { padding: 64px 0; border-top: 1px solid var(--border); }
+  h2 { font-size: 28px; margin-bottom: 8px; }
+  .sub { color: var(--muted); margin-bottom: 32px; max-width: 640px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; }
+  .card h3 { font-size: 16px; margin-bottom: 6px; }
+  .card p { color: var(--muted); font-size: 14px; }
+  .card .big { font-size: 22px; margin-bottom: 8px; }
+  ul.clean { list-style: none; }
+  ul.clean li { padding: 7px 0; color: var(--text); }
+  ul.clean li b { color: var(--text); }
+  ul.clean li span { color: var(--muted); }
+  .sec { color: var(--ok); }
+  footer { border-top: 1px solid var(--border); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+  footer a { color: var(--accent2); text-decoration: none; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="./">🔐 Coredesk <span>Password Manager</span></a>
+      <div class="links">
+        <a href="#features">Features</a>
+        <a href="#security">Security</a>
+        <a href="#platforms">Download</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="shield">🔐</div>
+    <h1>Coredesk Password Manager</h1>
+    <p class="tagline">
+      Your passwords, cards, secure notes and 2FA codes — in one
+      AES-256-GCM encrypted vault that lives only on your device.
+      No account. No cloud. No telemetry.
+    </p>
+    <div class="badges">
+      <span class="badge">🔒 AES-256-GCM</span>
+      <span class="badge">🔑 FIDO2 hardware key unlock</span>
+      <span class="badge">⏱ Built-in 2FA authenticator</span>
+      <span class="badge">📤 KeePass mobile export</span>
+      <span class="badge">📴 100% offline</span>
+    </div>
+    <a class="cta" href="https://apps.microsoft.com/detail/9PG6MDQ7M9JX">Get it from the Microsoft Store</a>
+    <div class="cta-note">Store listing publishing soon — Store ID 9PG6MDQ7M9JX</div>
+    <img class="shot" src="02-vault-screen.png" alt="Coredesk Password Manager — vault view">
+  </div>
+</div>
+
+<section id="features">
+  <div class="wrap">
+    <h2>Everything inside</h2>
+    <p class="sub">One place for every kind of secret — with the tools to keep them healthy.</p>
+    <div class="grid">
+      <div class="card"><div class="big">🔑</div><h3>Passwords</h3>
+        <p>Logins, usernames, e-mail, websites, notes, categories, live search and one-click copy that clears the clipboard after 30 seconds.</p></div>
+      <div class="card"><div class="big">⏱</div><h3>2FA authenticator</h3>
+        <p>Live TOTP codes for every account side by side with a shared 30-second countdown. Enroll by pasting a secret or scanning the setup QR.</p></div>
+      <div class="card"><div class="big">💳</div><h3>Credit cards</h3>
+        <p>Cardholder, masked number and CVV with per-field copy — stored with the same AES-256-GCM protection.</p></div>
+      <div class="card"><div class="big">📝</div><h3>Secure notes</h3>
+        <p>Anything text-based: Wi-Fi passwords, licence keys, recovery phrases — encrypted alongside everything else.</p></div>
+      <div class="card"><div class="big">🩺</div><h3>Password health audit</h3>
+        <p>Finds weak, reused, stale and missing passwords — and warns before you even save one.</p></div>
+      <div class="card"><div class="big">🎲</div><h3>Generator + history</h3>
+        <p>Cryptographically random passwords with a strength meter, plus the last 20 previous passwords per entry.</p></div>
+      <div class="card"><div class="big">📤</div><h3>Mobile export</h3>
+        <p>One click writes an encrypted KeePass (.kdbx) copy — opens in KeePassDX (Android) and Strongbox (iPhone), 2FA codes included.</p></div>
+      <div class="card"><div class="big">📥</div><h3>Move in easily</h3>
+        <p>Import from Chrome / Edge / Firefox CSV exports, KeePass CSV and Bitwarden JSON — duplicates skipped automatically.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="security">
+  <div class="wrap">
+    <h2>Security, in plain words</h2>
+    <p class="sub">Designed so that losing the vault file costs an attacker nothing — because it's useless without your secrets.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>How the vault is protected</h3>
+        <ul class="clean">
+          <li><b>AES-256-GCM</b> <span>— the whole vault is one authenticated encrypted blob</span></li>
+          <li><b>PBKDF2-SHA256, 1,000,000 iterations</b> <span>— slows offline brute-force a million-fold</span></li>
+          <li><b>No passphrase stored anywhere</b> <span>— not even a hash exists to attack</span></li>
+          <li><b>Fresh nonce every save</b> <span>— tampering fails the integrity check</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Ways to unlock</h3>
+        <ul class="clean">
+          <li><b>Master passphrase</b> <span>— the root credential</span></li>
+          <li><b>FIDO2 hardware key</b> <span>— e.g. a YubiKey: touch and you're in</span></li>
+          <li><b>Key file</b> <span>— optional second factor: stolen file + passphrase still isn't enough</span></li>
+          <li><b>Quick PIN</b> <span>— fast re-unlocks within a session (RAM only)</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Everyday hardening</h3>
+        <ul class="clean">
+          <li><b class="sec">Auto-lock</b> <span>— after 5 idle minutes, 2FA codes vanish with it</span></li>
+          <li><b class="sec">Clipboard auto-clear</b> <span>— 30 seconds after any copy</span></li>
+          <li><b class="sec">System tray</b> <span>— stays one click away, locked while idle</span></li>
+          <li><b class="sec">Printable recovery kit</b> <span>— documents every unlock method</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="platforms">
+  <div class="wrap">
+    <h2>Where it runs</h2>
+    <p class="sub">One vault format across every platform you use.</p>
+    <div class="grid">
+      <div class="card"><div class="big">🪟</div><h3>Windows 10 / 11</h3>
+        <p>Full install with Start-menu shortcuts and clean uninstall — or a portable single-file exe.</p></div>
+      <div class="card"><div class="big">🍎</div><h3>macOS</h3>
+        <p>A native .app bundle with the same features and the same encrypted vault format.</p></div>
+      <div class="card"><div class="big">📱</div><h3>Android &amp; iPhone</h3>
+        <p>Encrypted KeePass (.kdbx) export opens in KeePassDX or Strongbox — biometric unlock, offline, 2FA codes included.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    🔐 Coredesk Password Manager — by Debashis Chakraborty ·
+    <a href="privacy.html">Privacy policy</a> ·
+    Contact: via the Microsoft Store listing
+  </div>
+</footer>
+</body>
+</html>
